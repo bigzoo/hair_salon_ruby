@@ -1,0 +1,48 @@
+<ul class="center collection with-header">
+  <li class="collection-header">
+    <h4><%= @stylist.name %></h4>
+  </li>
+</ul>
+<%if @stylist.clients.any?() %>
+<ul class="center collection with-header">
+  <li class="collection-header">
+    <h4>Clients Assigned</h4>
+  </li>
+  <% @stylist.clients.each() do |client|%>
+  <li class="collection-item">
+    <div><%= client.name%>
+      <a href="/stylists/<%= @stylist.id%>/delete/clients/<%= client.id %>" class="secondary-content">
+        <i class="material-icons red-text">delete</i>
+      </a>
+    </div>
+  </li>
+  <%end %>
+</ul>
+<% else %>
+<ul class="center collection with-header">
+  <li class="collection-header">
+    <h4>Please add some clients to this stylist!</h4>
+  </li>
+</ul>
+<% end %>
+<a class="btn-floating btn-large waves-effect waves-light black lighten-2 center z-depth-3" data-target="modal1">
+  <i class="material-icons">add</i>
+</a>
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4 class="center">Add Client</h4>
+    <form action="/stylists/<%= @stylist.id%>/new/client" method="post">
+      <div>
+        <div class="input-field">
+          <select class="browser-default" name="client" id="client">
+            <% @clients.each() do |client|%>
+              <option value="<%= client.id%>"><%= client.name %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="modal-action black white-text lighten-2 modal-close waves-effect waves-green btn-flat">Add Client</button>
+    </form>
+  </div>
+</div>
