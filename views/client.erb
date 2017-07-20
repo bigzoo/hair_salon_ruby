@@ -1,0 +1,22 @@
+<ul class="center collection with-header">
+  <li class="collection-header">
+    <h4><%= @client.name %></h4>
+  </li>
+</ul>
+<%if @client.stylist %>
+<ul class="center collection with-header">
+  <li class="collection-header">
+    <h4>Stylist Assigned</h4>
+  </li>
+  <li class="collection-item">
+    <div><%= @client.stylist.name%>
+    </div>
+  </li>
+</ul>
+<% else %>
+<ul class="center collection with-header">
+  <li class="collection-header">
+    <h4>Please add this client to a stylist!</h4>
+  </li>
+</ul>
+<% end %>
