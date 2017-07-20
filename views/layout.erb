@@ -1,28 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Beauty Hair Salon</title>
-    <!-- Compiled and minified CSS -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-    <link rel="stylesheet" href="public/css/styles.css">
-  </head>
-  <body>
-    <div class="container">
-      <%= yield %>
-    </div>
-    <br>
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted">another one by the one and only
-          <a target="_blank" href="http://bigzoo.me">bigzoo</a>
-        </p>
-      </div>
-    </footer>
-    <!-- Compiled and minified JavaScript -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-    <script type="text/javascript" src="public/js/scripts.js"></script>
-  </body>
+<html lang="en">
+	<head>
+		<title>Trim Hair Salon</title>
+		<meta charset="utf-8">
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="shortcut icon" href="http://www.trimhairsalon.com/wp-content/uploads/udf_foundry/images/favicon.png">
+	</head>
+	<body>
+		<nav class="black lighten-1 ">
+			<div class="nav-wrapper">
+				<a href="/" class="brand-logo center">Trim Salon Management</a>
+				<a target="_blank" href="http://bigzoo.me/" class="brand-logo right">bigzoo</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class="side-nav" id="mobile-demo">
+					<li><a href="/">Home</a></li>
+					<li><a target="_blank" href="http://bigzoo.me/">bigzoo</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<%= yield %>
+		</div>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+		<script src="/js/scripts.js"></script>
+	</body>
 </html>
