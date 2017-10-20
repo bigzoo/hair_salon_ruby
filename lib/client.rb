@@ -18,7 +18,8 @@ class Client
     results.each() do |client|
       id = client.fetch('id').to_i
       name = client.fetch('name')
-      new_client = Client.new(id:id,name:name)
+      stylist_id = client.fetch('stylist_id').to_i
+      new_client = Client.new(id:id,name:name,stylist_id:stylist_id)
       clients.push(new_client)
     end
     clients
